@@ -11,4 +11,4 @@ You always can use online OUI checkers but much quicker to do it on Linux direct
 
 ### No more boring grey ARP tables! Brand new toxic Vendor ARP!
 
-###![arp - sucks!](https://yadi.sk/i/qIMZFXYf3RMUgz) -> ![varp - rulez!](https://yadi.sk/i/JcSce0013RMUiu)
+###![arp - sucks!](https://img-fotki.yandex.ru/get/373867/51752532.d/0_ff071_574ceee1_orig.png) -> ![varp - rulez!](https://img-fotki.yandex.ru/get/480528/51752532.d/0_ff072_3b4f650_orig.png)
