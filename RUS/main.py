@@ -38,12 +38,12 @@ class varp():
                 vmacs_last.append([mac[:8], self.vendor])
             elif self.vendor.startswith('HTC'):
                 self.color = paint.WARNING
-            elif self.vendor.startswith('Samsung')
-                self.color = paint.GREEN          
-            elif self.vendor.startswith('Huawei')
-                self.color = paint.CYAN                  
+            elif self.vendor.startswith('Samsung'):
+                self.color = paint.GREEN              
+            elif self.vendor.startswith('Huawei'):
+                self.color = paint.CYAN              
             elif self.vendor.startswith('Apple'):
-                self.color = paint.MAGENTA                  
+                self.color = paint.MAGENTA
         else:                                               # if arp is incompleted, change color to red
             self.vendor = ''
             self.color = paint.FAIL
@@ -79,8 +79,6 @@ class paint:
     EOL = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-    DARKGREY = '\033[90m'
-
 
 # checking MAC in file
 def check_db(mac, file):
@@ -115,7 +113,7 @@ def list_clear(l):
                 mac_in_int[i] += 1
             else:
                 mac_in_int[i] = 1
-            if m.startswith('<inc'):                    # ARP is incompleted
+            if m.startswith('<не'):                    # ARP is incompleted
                 m = '-- Incomplete  --'
             temp_list.append(varp(h, m, i))             # new object of class varp
     temp_list.sort(key=lambda v: (v.eth, v.host))       # sort lines by interfaces and IPs
@@ -166,7 +164,8 @@ def print_varp(arp):                                    # different borders:
 # We going to ask OS "arp -na | awk '...', dismember, try to find vendor and print it
 def call_arp():
     arp = subprocess.Popen(['arp', '-an'], stdout=subprocess.PIPE)
-    awk = subprocess.Popen(['awk', '$4~/<incomplete>/ {print $2, $4, $6}; $5~/[ether]/ {print $2, $4, $7}'], stdin=arp.stdout, stdout=subprocess.PIPE)
+#    awk = subprocess.Popen(['awk', '$4~/<incomplete>/ {print $2, $4, $6}; $5~/[ether]/ {print $2, $4, $7}'], stdin=arp.stdout, stdout=subprocess.PIPE)
+    awk = subprocess.Popen(['awk', '$4~/<не/ {print $2, $4, $7}; $5~/[ether]/ {print $2, $4, $7}'], stdin=arp.stdout, stdout=subprocess.PIPE)
     arp_result =  awk.communicate()[0]
     arp_clear = arp_result.split('\n')              # spliting it by words
     print_varp(list_clear(arp_clear))               # processing and print it out
