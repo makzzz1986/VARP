@@ -9,6 +9,10 @@ You always can use online OUI checkers but much quicker to do it on Linux direct
 * written for old Python 2.6.6 and Debian 2.6.32+
 * requires only arp and awk on host, no sudo privilage or installation. Add alias to .bashrc to use it quick!
 
-### No more boring grey ARP tables! Brand new toxic Vendor ARP!
+### No more boring grey ARP tables! 
 
-###![arp - sucks!](https://img-fotki.yandex.ru/get/373867/51752532.d/0_ff071_574ceee1_orig.png) -> ![varp - rulez!](https://img-fotki.yandex.ru/get/480528/51752532.d/0_ff072_3b4f650_orig.png)
+![arp - sucks!](https://img-fotki.yandex.ru/get/373867/51752532.d/0_ff071_574ceee1_orig.png) 
+
+### Brand new toxic Vendor ARP!
+
+![varp - rulez!](https://img-fotki.yandex.ru/get/480528/51752532.d/0_ff072_3b4f650_orig.png)
