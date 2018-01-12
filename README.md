@@ -7,7 +7,7 @@ You always can use online OUI checkers but much quicker to do it on Linux direct
 * colorizing vendors (in future - in separated configuration file)
 * nice borders for arps from one interface
 * written for old Python 2.6.6 and Debian 2.6.32+
-* requires only arp and awk on host, no sudo privilage or installation. Add alias to .bashrc to use it quick!
+* requires only arp and awk on host, no sudo privilage, installation or dependencies. Add alias to .bashrc to use it quick!
 
 ### No more boring grey ARP tables! 
 
